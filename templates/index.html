@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple GPT Wrapper</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        input, button { padding: 10px; margin: 10px; }
+        textarea { width: 80%; height: 100px; }
+    </style>
+</head>
+<body>
+    <h2>Simple GPT Wrapper</h2>
+    <form method="post">
+        <textarea name="user_input" placeholder="Enter text to translate...">{{ user_input or '' }}</textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if response %}
+        <h3>GPT Response:</h3>
+        <p>{{ response }}</p>
+    {% endif %}
+</body>
+</html>
